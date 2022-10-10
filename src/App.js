@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <main className="flex grow flex-col justify-center items-center bg-gray-700">
+    <main className="flex grow flex-col justify-center items-center bg-neutral-900">
       {quoteIndex && (
         <QuoteBox quote={quotes[quoteIndex]} newQuote={getQuote} />
       )}

@@ -8,7 +8,10 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const QuoteBox = ({ quote, newQuote }) => {
   return (
-    <div id="quote-box" className="w-1/2 p-10 bg-white rounded-3xl">
+    <div
+      id="quote-box"
+      className="md:w-1/2 sm:w-3/4 w-11/12 p-10 bg-white rounded-3xl"
+    >
       {/* Quote */}
       <h1 id="text" className="text-center text-2xl mb-10">
         <FontAwesomeIcon icon={faQuoteLeft} /> &nbsp; {quote.quote}
@@ -17,7 +20,7 @@ const QuoteBox = ({ quote, newQuote }) => {
       <p id="author" className="text-right">
         -{quote.author}
       </p>
-      <div className="flex justify-between mt-5">
+      <div className="flex justify-between mt-5 sm:flex-row flex-col">
         {/* Tweet button */}
         <a
           id="tweet-quote"
@@ -25,14 +28,14 @@ const QuoteBox = ({ quote, newQuote }) => {
           href={"https://twitter.com/intent/tweet?text=" + quote.quote}
           rel="noreferrer"
         >
-          <button className="p-3 border rounded-lg bg-indigo-600 text-white">
+          <button className="p-3 border rounded-lg bg-indigo-300 text-white sm:w-max w-full hover:text-black">
             <FontAwesomeIcon icon={faTwitter} />
           </button>
         </a>
         {/* New quote button */}
         <button
           id="new-quote"
-          className="border rounded-lg px-7 py-3 bg-indigo-600 text-white"
+          className="border rounded-lg px-7 py-3 bg-indigo-300 text-white sm:w-max w-full sm:mt-0 mt-5 hover:text-black"
           onClick={() => {
             newQuote();
           }}
